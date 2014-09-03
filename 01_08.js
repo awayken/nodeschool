@@ -3,6 +3,8 @@ var http = require('http'),
     results = [];
 
 urls.forEach(function( url ){
+    'use strict';
+
     http.get( url, function( response ) {
         var totalData = '';
 
@@ -12,18 +14,10 @@ urls.forEach(function( url ){
 
         response.on('end', function() {
             results.push( totalData );
-            if ( checkResults() ) {
-                printResults();
+            if ( results.length === urls.length ) {
+                console.log( results.join('').length );
+                console.log( results.join('') );
             }
         });
     });
 });
-
-function checkResults() {
-    return results.length === urls.length;
-}
-
-function printResults() {
-    console.log( results.join('').length );
-    console.log( results.join('') );
-}

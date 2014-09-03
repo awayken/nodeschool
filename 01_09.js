@@ -9,6 +9,8 @@ for ( var i = 0; i < urls.length; i++ ) {
     successes[ i ] = '0';
 
     (function( url, i ) {
+        'use strict';
+
         var thisI = i;
 
         http.get( url, function( response ) {
@@ -22,20 +24,12 @@ for ( var i = 0; i < urls.length; i++ ) {
                 results[ thisI ] = totalData;
                 successes[ thisI ] = '1';
 
-                if ( checkResults() ) {
-                    printResults();
+                if ( successes.indexOf('0') === -1 ) {
+                    results.forEach(function( result ) {
+                        console.log( result );
+                    });
                 }
             });
         });
     }( url, i ));
-}
-
-function checkResults() {
-    return successes.indexOf('0') === -1;
-}
-
-function printResults() {
-    results.forEach(function( result ) {
-        console.log( result );
-    });
 }

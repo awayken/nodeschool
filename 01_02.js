@@ -1,8 +1,8 @@
-var arguments = process.argv.slice( 2 ),
-	sum = 0;
+var args = process.argv.slice( 2 ),
+    sum = 0;
 
-while ( arguments.length ) {
-	sum += Number( arguments.pop() );
+while ( args.length ) {
+    sum += Number( args.pop() );
 }
 
 console.log( sum );

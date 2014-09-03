@@ -2,6 +2,8 @@ var net = require('net'),
     portNumber = process.argv[ 2 ];
 
 var server = net.createServer(function( socket ) {
+    'use strict';
+
     var date = new Date(),
         month = date.getMonth() + 1,
         day = date.getDate(),

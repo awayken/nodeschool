@@ -1,9 +1,10 @@
 var http = require('http'),
-	url = process.argv[ 2 ];
+    url = process.argv[ 2 ];
 
 http.get( url, function( response ) {
-	response.on('data', function( data ) {
-		console.log( data.toString() );
-	});
-});
+    'use strict';
 
+    response.on('data', function( data ) {
+        console.log( data.toString() );
+    });
+});
