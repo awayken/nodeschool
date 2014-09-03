@@ -1,0 +1,26 @@
+{
+  "name": "nodeschool",
+  "version": "0.0.1",
+  "description": "Working my way through http://nodeschool.io/",
+  "main": "none",
+  "dependencies": {
+    "through2-map": "~1.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/awayken/nodeschool.git"
+  },
+  "keywords": [
+    "nodeschool"
+  ],
+  "author": "Miles Rausch",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/awayken/nodeschool/issues"
+  },
+  "homepage": "https://github.com/awayken/nodeschool"
+}
